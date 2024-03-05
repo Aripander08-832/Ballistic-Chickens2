@@ -613,7 +613,7 @@ scene('game', () => {
                     scale(TILE * collectableSizes[current.frame]),
                     origin('center'),
                     area(),
-                    pos((distance+10+i)*SCALE, height()- SCALE*starHeight),
+                    pos((distance+5+i)*SCALE, height()- SCALE*starHeight),
                     z(Z.game),
                     'star',
                     'skyObject',
@@ -638,7 +638,7 @@ scene('game', () => {
           ]);
         };
         
-        if (rand(0,100) < 9 + upgradeMod(4)) {
+        if (rand(0,100) < 15 + upgradeMod(4)) {
           add([
             sprite('trampoline'),
             scale(TILE*1.9),
