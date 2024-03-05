@@ -924,7 +924,7 @@ scene('game', () => {
         });
 
         let moneyGain = Math.floor(
-          score/2 +
+          score*40 +
           getScore(distanceF -16) +
           getScore(maxAltitude -3)
         );
