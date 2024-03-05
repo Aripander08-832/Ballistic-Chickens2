@@ -55,7 +55,7 @@ scene('game', () => {
   };
 
   var score = 0;
-  var fuel = 50 + upgradeMod(2);
+  var fuel = 300 + upgradeMod(2);
   var maxFuel = fuel;
   
   var distace = 0;
@@ -361,7 +361,7 @@ scene('game', () => {
   onCollide('chicken', 'trampoline', (c, t) => {
     if (!rolling && !t.used) {
       t.used = true;
-      score += 5;
+      score += 50;
       chicken.yv = Math.abs(0.9 * chicken.yv);
       STUFF.stats.trampoline++;
       let sst = STUFF.stats.trampoline;
@@ -569,7 +569,7 @@ scene('game', () => {
 
       // STARS (and more) SPAWNING MESS
       
-      if (distance % 2 == 0 && lastStar != distance) {
+      if (distance % 1 == 0 && lastStar != distance) {
         lastStar = distance;
         starsRendered = 0;
         starsPossible = 0;
@@ -638,7 +638,7 @@ scene('game', () => {
           ]);
         };
         
-        if (rand(0,100) < 4 + upgradeMod(4)) {
+        if (rand(0,100) < 9 + upgradeMod(4)) {
           add([
             sprite('trampoline'),
             scale(TILE*1.9),
